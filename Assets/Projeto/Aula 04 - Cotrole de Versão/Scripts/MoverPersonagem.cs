@@ -11,7 +11,10 @@ public class MoverPersonagem : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		transform.position = saida.transform.position;
+		transform.position = new Vector2 (
+			saida.transform.position.x,
+			transform.position.y
+		);
 
 		if (chegada.transform.position.x < transform.position.x) {
 			direcao = Vector2.left;
