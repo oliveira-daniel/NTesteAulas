@@ -15,10 +15,10 @@ public class MoverPersonagem : MonoBehaviour
 
 		if (chegada.transform.position.x < transform.position.x) {
 			direcao = Vector2.left;
-			transform.localScale = new Vector3 (-1f, 1f, 1f);
+			transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, 1f);
 		} else { 
 			direcao = Vector2.right;
-			transform.localScale = new Vector3 (1f, 1f, 1f);
+			transform.localScale = new Vector3 (transform.localScale.x, transform.localScale.y, 1f);
 		}
 	}
 
